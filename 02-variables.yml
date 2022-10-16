@@ -16,3 +16,16 @@
       ansible.builtin.debug:
         msg: "{{ URL }} is the URL"
 
+- name: Demo on file variable
+  hosts: all
+  vars file:
+    - sample.vars.yml
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+
+
+
+
+
