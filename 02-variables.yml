@@ -34,5 +34,12 @@
       vars:
         URL: play.example.com
 
+- name: Variable from inventory
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+
 
 
