@@ -58,3 +58,12 @@
       ansible.builtin.debug:
         msg: "{{out.stdout}}"
 
+    - name: Declare a Fact
+      ansible.builtin.set_fact:
+        SHELL_STDOUT: "{{out.stdout}}"
+
+    - name: Print shell output from set_fact variable
+      ansible.builtin.debug:
+        msg: OUTPUT = {{ SHELL_STDOUT }}
+
+
