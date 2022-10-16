@@ -25,7 +25,14 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
-
+- name: Task level Variable
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: play.example.com
 
 
 
