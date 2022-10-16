@@ -10,7 +10,7 @@
 - name: Demo with Quotes on Variables
   hosts: all
   vars:
-    play.example.com
+    URL: play.example.com
   tasks:
     - name: Print URL
       ansible.builtin.debug:
