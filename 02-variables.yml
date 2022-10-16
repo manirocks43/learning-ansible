@@ -1,0 +1,20 @@
+## With out quotes ##
+- name: Demo on Variables
+  host: all
+  vars:
+    URL: play.example.com
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL = {{ URL }}
+
+## With Quotes ##
+- name: Demo with Quotes on Variables
+  host: all
+  vars:
+    play.example.com
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: "{{ URL }} is the URL"
+
