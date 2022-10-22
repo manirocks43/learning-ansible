@@ -1,0 +1,20 @@
+- name: Demo on conditions
+  hosts: localhost
+  vars:
+    a: 5
+    bool_val: false
+  tasks:
+    - name: String condition
+      debug:
+        msg: Hello CentOS
+      when: ansible_distribution == "CentOS"
+
+    - name: Number Check
+      debug:
+        msg: "{{a}} is gt then 1"
+      when: a > 1
+
+    - name: Run if bool_val is true
+      debug:
+        msg: Yes True
+      when: bool_val | bool
