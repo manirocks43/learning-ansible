@@ -2,7 +2,7 @@
   hosts: localhost
   vars:
    a: 5
-  bool_val: true
+   bool_val: true
   tasks:
     - name: String check
       debug:
