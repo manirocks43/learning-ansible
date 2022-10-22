@@ -1,17 +1,17 @@
-- name: Demo on conditions
+- name: Demo on Conditions
   hosts: localhost
   vars:
-    a: 5
-    bool_val: false
+   a: 5
+  bool_val: true
   tasks:
-    - name: String condition
+    - name: String check
       debug:
         msg: Hello CentOS
       when: ansible_distribution == "CentOS"
 
     - name: Number Check
       debug:
-        msg: "{{a}} is gt then 1"
+        msg: "{{a}} is gt 1"
       when: a > 1
 
     - name: Run if bool_val is true
