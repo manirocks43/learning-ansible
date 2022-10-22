@@ -1,8 +1,8 @@
 - name: Demo on Conditions
   hosts: localhost
   vars:
-   a: 5
-   bool_val: true
+   a: 0
+   bool_val: false
   tasks:
     - name: String check
       debug:
