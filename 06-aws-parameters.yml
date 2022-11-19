@@ -4,5 +4,5 @@
     - name: Pull secret
       debug: msg="{{ lookup('amazon.aws.aws_secret', 'roboshop/all-secrets', region='us-east-1') }}"
     - name: Pull parameter
-      debug: msg="{{ lookup('aws_ssm', 'roboshop.test', region='us-east-1') }}"
+      debug: msg="{{ lookup('aws_ssm', 'roboshop.test1', region='us-east-1') }}"
 
